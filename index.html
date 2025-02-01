@@ -16,24 +16,58 @@
                 <li><button class="nav-btn" data-section="contacto">Contacto</button></li>
             </ul>
         </nav>
-        
-        <section id="sobre-mi" class="section"> 
-            <h2>ARIEL GÜINAO</h2>
-            <p>Soy desarrollador de software</p>
-        </section>
-        
-        <section id="proyectos" class="section"> 
-            <h2>Proyectos</h2>
-            <ul>
-                <li><a href="https://github.com/ArielAG19/Clinicamedica">Proyecto 1</a></li>
-                <li><a href="https://github.com/ArielAG19/prototipo2">Proyecto 2</a></li>
-            </ul>
-        </section>
-        
-        <section id="contacto" class="section"> 
-            <h2>Contacto</h2>
-            <p>Email: arielag19@hotmail.es</p>
-        </section> 
-        <script src="script.js"></script>       
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section"> 
+        <h2>ARIEL GÜINAO</h2>
+        <p>Soy desarrollador de software</p>
+    </section>
+    
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section"> 
+        <h2>Proyectos</h2>
+        <div id="proyectos-lista">
+            <button class="proyecto-btn" data-proyecto="clinica-medica">Clínica Médica</button>
+            <button class="proyecto-btn" data-proyecto="prototipo">Prototipo</button>
+            <button class="proyecto-btn" data-proyecto="proyecto3">Proyecto 3</button>
+            <button class="proyecto-btn" data-proyecto="proyecto4">Proyecto 4</button>
+        </div>
+
+       <!-- Contenedores para cada proyecto -->
+<div id="clinica-medica" class="proyecto-detalle">
+    <h3>Clínica Médica</h3>
+    <p>Este es un sistema para la gestión de una clínica médica, un proyecto en .NET MVC en Visual Studio con uso de base de datos MYSQL.
+     En el video se explicará la funcionalidad del mismo.</p>
+    <a href="https://github.com/ArielAG19/Clinicamedica" target="_blank">Ver en GitHub</a>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=S2w7yQKj8as" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+        <div id="prototipo" class="proyecto-detalle">
+            <h3>Prototipo</h3>
+            <p>Descripción del prototipo aquí.</p>
+            <a href="https://github.com/ArielAG19/prototipo2" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div id="proyecto3" class="proyecto-detalle">
+            <h3>Proyecto 3</h3>
+            <p>Descripción del proyecto 3.</p>
+        </div>
+
+        <div id="proyecto4" class="proyecto-detalle">
+            <h3>Proyecto 4</h3>
+            <p>Descripción del proyecto 4.</p>
+        </div>
+    </section>
+    
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section"> 
+        <h2>Contacto</h2>
+        <p>Email: arielag19@hotmail.es</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

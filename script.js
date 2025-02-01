@@ -1,20 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Mostrar solo la primera sección al cargar
-    document.querySelector("#sobre-mi").classList.add("active");
+document.addEventListener("DOMContentLoaded", function () {
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const sections = document.querySelectorAll(".section");
+    const proyectoButtons = document.querySelectorAll(".proyecto-btn");
+    const proyectosDetalles = document.querySelectorAll(".proyecto-detalle");
 
-    // Obtener todos los botones del menú
-    const buttons = document.querySelectorAll(".nav-btn");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function() {
-            // Ocultar todas las secciones
-            document.querySelectorAll(".section").forEach(section => {
-                section.classList.remove("active");
-            });
-
-            // Mostrar la sección correspondiente al botón presionado
+    // Mostrar la sección seleccionada y ocultar las demás
+    navButtons.forEach(button => {
+        button.addEventListener("click", function () {
             const sectionId = this.getAttribute("data-section");
-            document.getElementById(sectionId).classList.add("active");
+
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? "block" : "none";
+            });
+        });
+    });
+
+    // Mostrar detalles del proyecto seleccionado
+    proyectoButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const proyectoId = this.getAttribute("data-proyecto");
+
+            proyectosDetalles.forEach(detalle => {
+                detalle.style.display = detalle.id === proyectoId ? "block" : "none";
+            });
         });
     });
 });

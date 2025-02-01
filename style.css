@@ -8,21 +8,18 @@ body {
     padding: 0;
 }
 
-/* Estilos del encabezado */
+/* Estilos del header */
 header {
-    background-color: #111; /* Negro más claro */
+    background-color: #222;
     color: white;
     padding: 20px;
 }
 
-h1 {
-    margin: 0;
-}
-
-/* Navegación */
+/* Estilos del menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -30,50 +27,79 @@ nav ul li {
     margin: 0 15px;
 }
 
-.nav-btn {
-    background: transparent;
-    border: 2px solid white;
+/* Estilos de los botones */
+button {
+    background-color: #444;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
     cursor: pointer;
-    transition: 0.3s;
     border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
-.nav-btn:hover {
-    background: white;
-    color: black;
+button:hover {
+    background-color: #666;
 }
 
 /* Secciones */
 .section {
+    display: none; /* Ocultar todas las secciones por defecto */
     margin: 50px auto;
     padding: 20px;
-    width: 80%;
-    background: rgba(255, 255, 255, 0.1); /* Transparencia */
-    border-radius: 10px;
+    background: #111; /* Fondo oscuro para las secciones */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 600px;
+    color: white;
 }
 
-/* Links */
-a {
-    color: #00bfff; /* Azul claro */
+/* Sección activa */
+.section.active {
+    display: block;
+}
+
+/* Contenedor de botones de proyectos */
+.proyectos-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada sección de proyecto */
+.proyecto-info {
+    display: none;
+    background: #222;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Mejora para los enlaces */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 10px 0;
+}
+
+.section ul li a {
     text-decoration: none;
+    color: #4DA8DA;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+.section ul li a:hover {
+    color: #66C2FF;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .section {
-        width: 90%;
-    }
-
-    .nav-btn {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
+/* Estilo para los contenedores de los proyectos */
+.proyecto-detalle iframe {
+    max-width: 100%; /* Asegura que el iframe no se desborde */
+    height: auto;
+    border-radius: 8px; /* Opcional, para que tenga bordes redondeados */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Añade sombra sutil */
+    margin: 10px 0; /* Da espacio entre el video y el texto */
 }
