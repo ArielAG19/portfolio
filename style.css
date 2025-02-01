@@ -2,23 +2,27 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
     margin: 0;
     padding: 0;
 }
 
-/* Estilos del header */
+/* Estilos del encabezado */
 header {
-    background-color: #333;
+    background-color: #111; /* Negro más claro */
     color: white;
     padding: 20px;
 }
 
-/* Estilos del menú de navegación */
+h1 {
+    margin: 0;
+}
+
+/* Navegación */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
@@ -26,56 +30,50 @@ nav ul li {
     margin: 0 15px;
 }
 
-/* Estilos de los botones de navegación */
-button {
-    background-color: #333;
+.nav-btn {
+    background: transparent;
+    border: 2px solid white;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 10px 20px;
     font-size: 16px;
-    transition: background 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #555;
+.nav-btn:hover {
+    background: white;
+    color: black;
 }
 
 /* Secciones */
 .section {
-    display: none; /* Ocultar todas las secciones por defecto */
     margin: 50px auto;
     padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1); /* Transparencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Sección activa (visible) */
-.section.active {
-    display: block;
-}
-
-/* Mejora para los enlaces dentro de la sección de proyectos */
-.section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.section ul li {
-    margin: 10px 0;
-}
-
-.section ul li a {
+/* Links */
+a {
+    color: #00bfff; /* Azul claro */
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
 
-.section ul li a:hover {
-    color: #555;
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        width: 90%;
+    }
+
+    .nav-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
