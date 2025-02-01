@@ -15,14 +15,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Ocultar todos los detalles de los proyectos por defecto
+    proyectosDetalles.forEach(detalle => {
+        detalle.style.display = "none";
+    });
+
     // Mostrar detalles del proyecto seleccionado
     proyectoButtons.forEach(button => {
         button.addEventListener("click", function () {
             const proyectoId = this.getAttribute("data-proyecto");
 
+            // Ocultar todos los proyectos
             proyectosDetalles.forEach(detalle => {
-                detalle.style.display = detalle.id === proyectoId ? "block" : "none";
+                detalle.style.display = "none";
             });
+
+            // Mostrar el proyecto seleccionado
+            const proyectoSeleccionado = document.getElementById(proyectoId);
+            if (proyectoSeleccionado) {
+                proyectoSeleccionado.style.display = "block";
+            }
         });
     });
 });

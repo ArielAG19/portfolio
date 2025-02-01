@@ -95,11 +95,12 @@ button:hover {
 .section ul li a:hover {
     color: #66C2FF;
 }
+
 /* Estilo para los contenedores de los proyectos */
 .proyecto-detalle iframe {
     max-width: 100%; /* Asegura que el iframe no se desborde */
-    height: auto;
-    border-radius: 8px; /* Opcional, para que tenga bordes redondeados */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Añade sombra sutil */
+    height: 315px; /* Fija la altura para el video */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra sutil */
     margin: 10px 0; /* Da espacio entre el video y el texto */
 }
