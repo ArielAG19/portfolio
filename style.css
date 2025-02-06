@@ -13,17 +13,44 @@ header {
     background-color: #222;
     color: white;
     padding: 20px;
+    background-image: url('imagenes/playa.jpg'); /* Fondo de imagen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    height: 60vh; /* Ajusta el tamaño del header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animación para el título */
+@keyframes titleAnimation {
+    0% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif; /* Fuente más profesional */
+    font-size: 4rem; /* Título más grande */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 5px; /* Espaciado entre letras */
+    animation: titleAnimation 2s ease-in-out; /* Animación */
+    color: #4DA8DA; /* Color del texto */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); /* Sombra sutil */
 }
 
 /* Estilos del menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -38,6 +65,7 @@ button {
     border-radius: 5px;
     font-size: 16px;
     transition: background 0.3s ease;
+    font-family: 'Arial', sans-serif;
 }
 
 button:hover {
@@ -53,7 +81,7 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     color: white;
 }
 
@@ -103,4 +131,145 @@ button:hover {
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra sutil */
     margin: 10px 0; /* Da espacio entre el video y el texto */
+}
+
+/* Estilos de los botones de proyecto */
+.proyecto-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.proyecto-btn:hover {
+    background-color: #555;
+}
+
+/* Estilo para los títulos de proyectos */
+h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #4DA8DA; /* Color para los títulos de los proyectos */
+    margin-bottom: 10px;
+}
+
+/* Fondo general */
+body {
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    font-family: 'Roboto', sans-serif; /* Fuente general */
+    margin: 0;
+    padding: 0;
+}
+
+/* Sección de Contacto */
+#contacto p {
+    font-size: 1.2rem;
+}
+ font-weight: 700;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+/* Estilos de los botones */
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Mayor padding para hacerlos más grandes */
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px; /* Fuente más grande */
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Secciones */
+.section {
+    display: none;
+    margin: 50px auto;
+    padding: 40px 20px; /* Más padding para separar el contenido */
+    background: #111; /* Fondo oscuro */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 800px; /* Max width mayor */
+    color: white;
+}
+
+/* Títulos de las secciones */
+.section h2 {
+    font-size: 2.5em; /* Títulos grandes */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Proyectos */
+#proyectos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px; /* Espaciado entre botones */
+    padding: 20px;
+}
+
+.proyecto-btn {
+    font-size: 1.5em; /* Hacemos los botones más grandes */
+    padding: 15px;
+    background-color: #444;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.proyecto-btn:hover {
+    background-color: #666;
+}
+
+.proyecto-detalle {
+    display: none;
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Estilo de los enlaces */
+.section ul li a {
+    text-decoration: none;
+    color: #4DA8DA;
+    font-weight: bold;
+}
+
+.section ul li a:hover {
+    color: #66C2FF;
 }
