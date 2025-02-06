@@ -104,172 +104,46 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Mejora para los enlaces */
-.section ul {
-    list-style: none;
-    padding: 0;
-}
+/* Media query para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    /* Ajustamos el header */
+    header {
+        height: 50vh; /* Ajustamos la altura para móviles */
+    }
 
-.section ul li {
-    margin: 10px 0;
-}
+    header h1 {
+        font-size: 2rem; /* Reducimos el tamaño de la fuente del título */
+    }
 
-.section ul li a {
-    text-decoration: none;
-    color: #4DA8DA;
-    font-weight: bold;
-}
+    /* Estilo del menú */
+    nav ul {
+        display: block; /* Los botones estarán en una columna en lugar de una fila */
+        text-align: center;
+    }
 
-.section ul li a:hover {
-    color: #66C2FF;
-}
+    nav ul li {
+        margin: 10px 0; /* Espaciado vertical entre los botones */
+    }
 
-/* Estilo para los contenedores de los proyectos */
-.proyecto-detalle iframe {
-    max-width: 100%; /* Asegura que el iframe no se desborde */
-    height: 315px; /* Fija la altura para el video */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra sutil */
-    margin: 10px 0; /* Da espacio entre el video y el texto */
-}
+    nav button {
+        font-size: 14px; /* Reducimos el tamaño de los botones */
+        padding: 12px 20px;
+    }
 
-/* Estilos de los botones de proyecto */
-.proyecto-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 15px;
-    margin: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-}
+    /* Secciones */
+    .section {
+        width: 90%; /* Ocupa un poco más del 100% del ancho disponible */
+        padding: 15px; /* Reducimos el padding */
+    }
 
-.proyecto-btn:hover {
-    background-color: #555;
-}
+    .proyecto-btn {
+        font-size: 14px; /* Reducimos el tamaño de los botones de proyectos */
+        padding: 8px 14px;
+    }
 
-/* Estilo para los títulos de proyectos */
-h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-h2 {
-    font-size: 3rem;
-}
-
-h3 {
-    font-size: 2rem;
-    color: #4DA8DA; /* Color para los títulos de los proyectos */
-    margin-bottom: 10px;
-}
-
-/* Fondo general */
-body {
-    background-color: #000; /* Fondo negro */
-    color: white; /* Texto blanco */
-    font-family: 'Roboto', sans-serif; /* Fuente general */
-    margin: 0;
-    padding: 0;
-}
-
-/* Sección de Contacto */
-#contacto p {
-    font-size: 1.2rem;
-}
- font-weight: 700;
-}
-
-/* Estilos del menú de navegación */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-/* Estilos de los botones */
-button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 12px 25px; /* Mayor padding para hacerlos más grandes */
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 18px; /* Fuente más grande */
-    transition: background 0.3s ease;
-}
-
-button:hover {
-    background-color: #666;
-}
-
-/* Secciones */
-.section {
-    display: none;
-    margin: 50px auto;
-    padding: 40px 20px; /* Más padding para separar el contenido */
-    background: #111; /* Fondo oscuro */
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    width: 80%;
-    max-width: 800px; /* Max width mayor */
-    color: white;
-}
-
-/* Títulos de las secciones */
-.section h2 {
-    font-size: 2.5em; /* Títulos grandes */
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* Proyectos */
-#proyectos-lista {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px; /* Espaciado entre botones */
-    padding: 20px;
-}
-
-.proyecto-btn {
-    font-size: 1.5em; /* Hacemos los botones más grandes */
-    padding: 15px;
-    background-color: #444;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-}
-
-.proyecto-btn:hover {
-    background-color: #666;
-}
-
-.proyecto-detalle {
-    display: none;
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Estilo de los enlaces */
-.section ul li a {
-    text-decoration: none;
-    color: #4DA8DA;
-    font-weight: bold;
-}
-
-.section ul li a:hover {
-    color: #66C2FF;
+    /* Proyectos */
+    .proyecto-detalle iframe {
+        max-width: 100%; 
+        height: 200px; /* Reducimos la altura del iframe en móviles */
+    }
 }
